@@ -23,9 +23,11 @@ img{
 }
 
 
-header{
-    height: 100%;
+.poster{
+    height: 100vh;
     background-image: url("/assets/couch1.jpg");
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,7 +82,21 @@ nav{
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
+    color: white;
 }
 .slogan span{
     color: #e9912e;
+}
+
+
+
+/* Furniture */
+.furnitureItem{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+.furnitureItem>*{
+    border: 1px solid red;
 }
