@@ -16,6 +16,7 @@ body{
     font-family: sans-serif;
     font-size: .8rem;
     height: 100vh;
+    scroll-behavior: smooth;
 }
 img{
     max-width: 100%;
@@ -94,9 +95,293 @@ nav{
 .furnitureItem{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-row-gap: 4vw;
+    justify-items: center;
+    padding: 5vw;
+}
+.furnitureItem__child{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.back {
+    position: absolute;
+    width: 80%;
+    height: 200px;
+    background-color: #477262;
+    border-top-right-radius: 30%;
+    top: 0;
+    padding: 10px;
+}
+.back p{
+    color: yellow;
+    font-size: .6rem;
+}
+.back h1{
+    color: white;
+}
+.front{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 70%;
+}
+.front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 30%;
+}
+.front button{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    padding: 5px 20px;
+    background-color: #477262;
+    border: none;
+    border-radius: 10%;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+.highlighte{
+    background-image: url("/assets/highlight.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+.highlighte span{
+    color: #e9912e;
+}
+.highlighte div{
+    float: right;
+    padding: 5% 5%;
+}
+.highlighte div h1,h2,h3{
+    color: black;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.highlighte div button{
+    float: right;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.highlighte div h1,h2{
+    font-weight: bold;
+}
+.highlighte div h1{
+    font-size: 2.5rem;
+}
+.highlighte div h2{
+    font-size: 1.9rem;
+}
+
+
+
+
+.clients{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+.animationContainer{
+    display: inline-flex;
+}
+.left, .right{
+    display: flex;
+    flex-direction:row;
+    gap: 20px;  
+    padding: 20px;  
+} 
+.left{
+    animation : 15s slide infinite Linear;
+}
+.right{
+    animation : 15s slide infinite Linear reverse;
+} 
+.client_card{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    min-width: 350px;
+    background-color: #efefef;
+    border-radius: 10px;
+    padding: 10px;
+}
+.client_card img{
+    width: 50px;
+    height: 50px;
+}
+
+@keyframes slide {
+    from {
+    transform: translateX(0);
+    }
+    to {
+    transform: translateX(-100%);
+    }
+}
+
+
+
+.grid-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    justify-items: center;
+    padding: 40px 30px;
+}
+.grid-row > div{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+.grid-row > *:not(:last-child){
+    flex-basis: 30%;
+    border-right: 1px solid #878787;
+}
+
+.upperHeader{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    justify-content: space-between;
+    background-color: #477262;
+    gap: 30px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: white;
+}
+.about p,h4{
+    line-height: 1.5;
+}
+.about .logo{
+    background-color: #ffffff;
+    padding: 20px 50px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: min-content;
+    color: black;
+}
+.connect{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+}
+
+.shopByRooms{
+    background-color: #477262;
     padding: 20px;
 }
-.furnitureItem>*{
-    border: 1px solid red;
+.shopByRooms h1{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+.shopByRooms span{
+    color: #e9912e;
+}
+.shopBy{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+.shopBy > div{
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+.shopBy > div div{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+}
+.shopBy > div div:last-child img{
+    border-radius: 40% 5% 0 5%;
+}
+.shopBy > div div:last-child p{
+    position: absolute;
+    right: -25px;
+    bottom: 25px;
+    background-color: #e9912d;
+    color: white;
+    padding: 5px 10px;
+}
+.shopBy > div div:first-child {
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    background-color: #ffffff;
+    border-radius: 4%;
+    padding-left: 10px;
+}
+
+
+
+
+
+
+.links{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: white;
+}
+.links h4{
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+.links ul{
+    display: grid;
+    gap: 10px;
+    list-style-type: "▶  ";
+}
+.links ul li a{
+    color: white;
+    font-size: .9rem;
+}
+.col2{
+    grid-template-columns: 1fr 1fr;
+}
+
+.lowerHeader{
+    background-color: #305145;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 50px;
+}
+.lowerHeader ul{
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+}
+.lowerHeader ul li a{
+    color: white;
+    font-weight: bold;
+    padding: 0 20px;
+}
+.lowerHeader ul li:not(:last-child){
+    border-right: 1px solid white;
 }
