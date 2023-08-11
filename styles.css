@@ -49,6 +49,7 @@ nav{
 /* logo */
 .logo{
     display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 .logo img{
@@ -234,6 +235,48 @@ nav{
     transform: translateX(-100%);
     }
 }
+.feature{
+    position: relative;
+}
+.absCard{
+    position: absolute;
+    width: 100%;
+    top: calc(75% + 30px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.absCard__child img{
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #477262;
+}
+.absCard__child{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0px #878787;
+}
+.absCard__child > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.absCard__child h4{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.feature > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 
 
