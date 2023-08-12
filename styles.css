@@ -175,7 +175,7 @@ nav{
     background-color: transparent;
     font-size: 1rem;
     font-weight: bold;
-    border: 2px solid black;
+    border: 3px solid black;
 }
 
 .highlighte div h1,h2{
@@ -237,6 +237,37 @@ nav{
 }
 .feature{
     position: relative;
+}
+.overlay{
+    position: absolute;
+    float: right;
+    top: 5%;
+    right: 5%;
+}
+.overlay h1{
+    color: black;
+    font-size: 3rem;
+    font-weight:900;
+    margin-bottom: 10px;
+    text-align: right;
+}
+.overlay span{
+    color: #e9912e;
+}
+.overlay p{
+    color: black;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    text-align: right;
+}
+.overlay button{
+    background-color: transparent;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 3px solid black;
+    float: right;
+    margin-top: 20px;
 }
 .absCard{
     position: absolute;
